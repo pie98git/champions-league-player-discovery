@@ -201,3 +201,13 @@ Interested in:
 - Football Scouting
 - Recommendation Systems
 - AI Applications in Sports
+
+# Example Use Case
+
+## Example Radar Comparison
+
+Example comparison between a Champions League striker profile and a statistically similar non-UCL player identified by the engine.
+
+### Julián Álvarez vs Ragnar Ache
+
+![Radar Chart](images/julian_alvarez_vs_ragnar_ache_radar.png)
