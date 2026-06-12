@@ -211,3 +211,41 @@ Example comparison between a Champions League striker profile and a statisticall
 ### Julián Álvarez vs Ragnar Ache
 
 ![Radar Chart](images/julian_alvarez_vs_ragnar_ache_radar.png)
+
+## Hidden Gems Discovery
+
+The project includes a hidden gems discovery engine designed to identify young, non-Champions League players with strong attacking production and sufficient playing time.
+
+### Selection Criteria
+
+- Not playing for a Champions League team
+- Age ≤ 24
+- Minimum playing time threshold
+- Ranked using performance metrics
+
+### Example Hidden Gems
+
+| Player | Club | League |
+|----------|----------|----------|
+| Rômulo | RB Leipzig | Bundesliga |
+| Karl Etta Eyong | Levante | La Liga |
+| Emersonn | Toulouse | Ligue 1 |
+
+The engine can be used to identify emerging talent before they reach top-tier European clubs.
+
+## Project Roadmap
+
+### Version 1.0
+- [x] Data collection
+- [x] Similarity engine
+- [x] Scouting score
+- [x] Hidden gems discovery
+- [x] Radar chart visualizations
+
+### Future Improvements
+- [ ] Full FBref dataset integration
+- [ ] xG and xA metrics
+- [ ] Midfielder scouting engine
+- [ ] Defender scouting engine
+- [ ] Streamlit dashboard
+- [ ] Market value integration
