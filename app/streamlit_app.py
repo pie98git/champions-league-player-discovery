@@ -174,3 +174,46 @@ if st.button("Find Similar Non-UCL Players"):
     )
 
     st.pyplot(radar_fig)
+
+    st.divider()
+
+st.header("🔍 Hidden Gems")
+
+hidden_gems_df = df.copy()
+
+hidden_gems_df["scouting_score"] = (
+    hidden_gems_df["Gls_per90"] * 35
+    + hidden_gems_df["Ast_per90"] * 25
+    + hidden_gems_df["xG_per90"] * 25
+    + hidden_gems_df["xA_per90"] * 15
+)
+
+hidden_gems_df = hidden_gems_df[
+    ~hidden_gems_df["Squad"].isin(ucl_teams)
+].copy()
+
+hidden_gems_df = hidden_gems_df[
+    hidden_gems_df["Age"] <= 24
+].copy()
+
+hidden_gems_df = hidden_gems_df.sort_values(
+    "scouting_score",
+    ascending=False
+)
+
+st.dataframe(
+    hidden_gems_df[
+        [
+            "Player",
+            "Squad",
+            "Age",
+            "scouting_score",
+            "Gls_per90",
+            "Ast_per90",
+            "xG_per90",
+            "xA_per90"
+        ]
+    ]
+    .head(10),
+    hide_index=True
+)
